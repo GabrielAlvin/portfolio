@@ -1,7 +1,5 @@
 <template>
-  <div class="bg-black px-10">
-    <h1>About</h1>
-  </div>
+  <h1>Sobre mim</h1>
 </template>
 
 <script>
