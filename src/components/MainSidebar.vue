@@ -32,6 +32,7 @@ export default {
             menuItems: [
                 { title: "Inicio", path: "/", icon: "mdi-view-dashboard" },
                 { title: "Sobre", path: "/about", icon: "mdi-forum" },
+                { title: "GitHub", path: "/github", icon: "mdi-forum" },
             ],
         }
     },
