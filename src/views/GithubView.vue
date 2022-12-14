@@ -1,7 +1,13 @@
 <template>
   <v-container>
-    <MainProfile :user="user" />
-    <MainRepos :repos="repos" />
+    <v-row no-gutters>
+      <v-col cols="12" sm="7">
+        <MainProfile :user="user" />
+      </v-col>
+      <v-col cols="12" sm="5">
+        <MainRepos :repos="repos" />
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 

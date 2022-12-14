@@ -1,8 +1,9 @@
 <template>
+    <v-progress-linear color="deep-orange darken-3"></v-progress-linear>
     <v-layout>
         <v-navigation-drawer v-model="drawer" temporary>
             <v-list density="compact" nav>
-                <v-list-item v-for="item in menuItems" :key="item.title" :prepend-icon="item.icon" :to="item.path" color="green">
+                <v-list-item v-for="item in menuItems" :key="item.title" :prepend-icon="item.icon" :to="item.path" color="deep-orange darken-3">
                     {{ item.title }}
                 </v-list-item>
             </v-list>
@@ -10,11 +11,11 @@
 
         <v-main class="bg-white">
             <div class="d-flex justify-space-between pa-4">
-                <div>
+                <v-btn class="bg-deep-orange darken-3" @click.stop="drawer = !drawer" prepend-icon="mdi-format-align-justify">Menu</v-btn>
+                <div class="text-right">
                     <h1 class="font-weight-bold text-body-1">GABRIEL SOUZA OLIVEIRA</h1>
                     <p class="text-caption">Web Developer</p>
                 </div>
-                <v-btn class="bg-green darken-1" @click.stop="drawer = !drawer" prepend-icon="mdi-format-align-justify">Menu</v-btn>
             </div>
             <router-view/>
         </v-main>
