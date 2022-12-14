@@ -1,18 +1,17 @@
 <template>
-    <div>
-        <ul>
-            <li>{{ user.public_repos }}</li>
-            <li>{{ user.followers }}</li>
-            <li>{{ user.following }}</li>
-        </ul>
-
-        <a :href="user.html_url">Ver Perfil</a>
-    </div>
+    <h2 class="text-h1">{{ user.name }}</h2>
+    <v-layout>
+        <v-list-item :title="user.bio"></v-list-item>
+        <v-list-item :title="user.public_repos"></v-list-item>
+        <v-list-item :title="user.followers"></v-list-item>
+        <v-list-item :title="user.following"></v-list-item>
+    </v-layout>
 </template>
 
 <script>
 export default {
-    props:['user']
+    name: "MainProfile",
+    props: ['user']
 }
 </script>
 
