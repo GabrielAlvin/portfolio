@@ -1,18 +1,20 @@
 <template>
-  <div>
-    <MainProfile :user="user"/>
-    <button @click="getPerfil">Button</button>
-  </div>
+  <v-container>
+    <MainProfile :user="user" />
+    <MainRepos :repos="repos" />
+  </v-container>
 </template>
 
 <script>
 import MainProfile from '@/components/MainProfile';
+import MainRepos from '@/components/MainRepos';
 import Axios from "axios";
 
 export default {
   name: 'GithubView',
   components: {
-    MainProfile
+    MainProfile,
+    MainRepos
   },
   data() {
       return {
@@ -26,9 +28,14 @@ export default {
           repos: []
       }
   },
-  mounted() {
-    const { url, client_id, client_secret} = this.github; 
-    Axios.get (`${url}?${client_id}&${client_secret}`).then(({data}) => this.user = data);
+  async mounted() {
+    try {
+      const { url, url_rep, client_id, client_secret} = this.github; 
+      Axios.get (`${url}?${client_id}&${client_secret}`).then(({data}) => this.user = data);
+      Axios.get (`${url_rep}?${client_id}&${client_secret}`).then(({data}) => this.repos = data);
+    } catch(e) {
+      console.error(e);
+    }
   }
 }
 </script>

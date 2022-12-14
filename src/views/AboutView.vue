@@ -1,5 +1,7 @@
 <template>
-  <h1>Sobre mim</h1>
+  <v-container>
+    <h1 elevation>Sobre mim</h1>
+  </v-container>
 </template>
 
 <script>

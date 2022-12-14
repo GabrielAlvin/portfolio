@@ -8,7 +8,7 @@
             </v-list>
         </v-navigation-drawer>
 
-        <v-main class="bg-black">
+        <v-main class="bg-white">
             <div class="d-flex justify-space-between pa-4">
                 <div>
                     <h1 class="font-weight-bold text-body-1">GABRIEL SOUZA OLIVEIRA</h1>
@@ -16,9 +16,7 @@
                 </div>
                 <v-btn class="bg-green darken-1" @click.stop="drawer = !drawer" prepend-icon="mdi-format-align-justify">Menu</v-btn>
             </div>
-            <v-container>
-                <router-view/>
-            </v-container>
+            <router-view/>
         </v-main>
     </v-layout>
 </template>

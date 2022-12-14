@@ -1,5 +1,7 @@
 <template>
-  <h1 elevation>Teste</h1>
+  <v-container>
+    <h1 elevation>Home</h1>
+  </v-container>
 </template>
 
 <script>
