@@ -1,5 +1,4 @@
 <template>
-    <v-progress-linear color="deep-orange darken-3"></v-progress-linear>
     <v-layout>
         <v-navigation-drawer v-model="drawer" temporary>
             <v-list density="compact" nav>
@@ -29,9 +28,9 @@ export default {
         return {
             drawer: null,
             menuItems: [
-                { title: "Inicio", path: "/", icon: "mdi-view-dashboard" },
-                { title: "Sobre", path: "/about", icon: "mdi-forum" },
-                { title: "GitHub", path: "/github", icon: "mdi-forum" },
+                { title: "Inicio", path: "/", icon: "mdi-view-dashboard"},
+                { title: "Sobre", path: "/about", icon: "mdi-newspaper-variant"},
+                { title: "GitHub", path: "/github", icon: "mdi-github"},
             ],
         }
     },
