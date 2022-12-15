@@ -16,6 +16,11 @@ const routes = [
     path: '/github',
     name: 'github',
     component: () => import('../views/GithubView.vue')
+  },
+  {
+    path: '/youtube',
+    name: 'youtube',
+    component: () => import('../views/YoutubeView.vue')
   }
 ]
 

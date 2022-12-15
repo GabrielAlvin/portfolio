@@ -31,6 +31,7 @@ export default {
                 { title: "Inicio", path: "/", icon: "mdi-view-dashboard"},
                 { title: "Sobre", path: "/about", icon: "mdi-newspaper-variant"},
                 { title: "GitHub", path: "/github", icon: "mdi-github"},
+                { title: "Youtube", path: "/youtube", icon: "mdi-youtube"},
             ],
         }
     },
