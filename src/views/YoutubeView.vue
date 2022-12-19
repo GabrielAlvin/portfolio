@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <v-row no-gutters class="justify-space-between">
+        <v-row no-gutters class="flex">
             <VideoCard :videos="videos"/>
         </v-row>
     </v-container>
@@ -19,17 +19,17 @@ export default {
         return {
             youtube:{
                 url: 'https://www.googleapis.com/youtube/v3/search',
-                key: 'AIzaSyAppjkhtZIZouV8jGnfcbTIFiAs-nF5KSU',
+                key: 'AIzaSyDG8FPVTRRWtKKbRQxJvW_ieTW7lum5g-s',
                 part: 'snippet',
-                maxResults: 5,
-                q: 'vue js',
+                maxResults: 6,
+                q: 'laranja',
                 type: 'video'
             },
             videos: []
         }
     },
 
-    async mounted(){
+    created(){
         try{
             const { url, key, part, q, type, maxResults} = this.youtube;
             Axios.get(`${url}?part=${part}&maxResults=${maxResults}&q=${q}&${type}&key=${key}`).then(({data}) => this.videos = data.items);
