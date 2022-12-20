@@ -1,13 +1,20 @@
 <template>
-    <div v-for="video in videos" :key="video.id" cols="12" sm="4" class="ma-2">
-        <iframe id="player" type="text/html" width="350" height="196" :src="'http://www.youtube.com/embed/' + video.id.videoId" frameborder="0"></iframe>
-    </div>
+    <v-col v-for="video in videos.items" :key="video.id" cols="12" sm="4" class="pa-4">
+        <v-card elevation="4" outlined shaped max-height="250">
+            <v-img :src="video.snippet.thumbnails.high.url"></v-img>
+        </v-card>
+
+        <h4 class="text-uppercase text-subtitle-2 mt-2 ">{{ video.snippet.title }}</h4>
+    </v-col>
 </template>
 
 <script>
 export default {
     name: 'VideoCard',
     props: ['videos'],
+    data: () => ({
+        show: false,
+    }),
 };
 </script>
 

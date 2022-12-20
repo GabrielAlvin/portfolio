@@ -1,6 +1,7 @@
 <template>
     <v-container>
-        <v-row no-gutters class="flex">
+        <h2 class="text-sm-h2 mb-4">Cursos Gratuitos</h2>
+        <v-row no-gutters>
             <VideoCard :videos="videos"/>
         </v-row>
     </v-container>
@@ -18,12 +19,12 @@ export default {
     data() {
         return {
             youtube:{
-                url: 'https://www.googleapis.com/youtube/v3/search',
+                url: 'https://www.googleapis.com/youtube/v3/',
                 key: 'AIzaSyDG8FPVTRRWtKKbRQxJvW_ieTW7lum5g-s',
+                channelId: 'UCmkP_w1m2DvgYW3mqsI3dhw',
                 part: 'snippet',
-                maxResults: 6,
-                q: 'laranja',
-                type: 'video'
+                font: 'playlists',
+                playlistId: 'PLyOVuyJSXviO4aU2RdEZPB-7pBtfSenkf'
             },
             videos: []
         }
@@ -31,8 +32,8 @@ export default {
 
     created(){
         try{
-            const { url, key, part, q, type, maxResults} = this.youtube;
-            Axios.get(`${url}?part=${part}&maxResults=${maxResults}&q=${q}&${type}&key=${key}`).then(({data}) => this.videos = data.items);
+            const { url, key, part, font, channelId} = this.youtube;
+            Axios.get(`${url}${font}?part=${part}&channelId=${channelId}&key=${key}`).then(({data}) => this.videos = data);
         }catch(e) {
             console.error(e);
         }

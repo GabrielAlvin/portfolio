@@ -29,7 +29,7 @@ export default {
             drawer: null,
             menuItems: [
                 { title: "Inicio", path: "/", icon: "mdi-view-dashboard"},
-                { title: "Sobre", path: "/about", icon: "mdi-newspaper-variant"},
+                { title: "Sobre", path: "/sobre", icon: "mdi-newspaper-variant"},
                 { title: "GitHub", path: "/github", icon: "mdi-github"},
                 { title: "Youtube", path: "/youtube", icon: "mdi-youtube"},
             ],
