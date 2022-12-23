@@ -1,8 +1,12 @@
 <template>
-    <v-card elevation="10" shaped  v-for="repo in repos" :key="repo.id" :href="repo.html_url" target="_blank" class="my-3 pa-10 bg-deep-orange darken-1">
-        <h4 class="text-uppercase">{{ repo.full_name }}</h4>
-        <p class="text-caption">{{ repo.language }}</p>
-    </v-card>
+    <v-row>
+        <v-col cols="12" sm="6" v-for="repo in repos" :key="repo.id">
+            <v-card elevation="10" shaped :href="repo.html_url" target="_blank" class=" pa-10 bg-light-blue darken-4" height="120">
+                <h4 class="text-uppercase font-weight-black text-caption">{{ repo.full_name }}</h4>
+                <p class="text-caption">{{ repo.language }}</p>
+            </v-card>
+        </v-col>
+    </v-row>
 </template>
 
 <script>

@@ -1,13 +1,12 @@
 <template>
   <v-container>
-    <v-row no-gutters>
-      <v-col cols="12" sm="7">
+      <v-col class="pa-5">
         <MainProfile :user="user" />
       </v-col>
-      <v-col cols="12" sm="5">
+      <v-col class="pa-5">
+        <h2 class="my-2">Meus Repositórios</h2>
         <MainRepos :repos="repos" />
       </v-col>
-    </v-row>
   </v-container>
 </template>
 

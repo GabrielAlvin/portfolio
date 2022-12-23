@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <h2 class="text-sm-h2 mb-4">Cursos Gratuitos</h2>
+        <h2 class="text-sm-h3 mb-4">Playlists</h2>
         <v-row no-gutters>
             <VideoCard :videos="videos"/>
         </v-row>
