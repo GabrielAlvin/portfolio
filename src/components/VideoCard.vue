@@ -3,7 +3,7 @@
         <v-card elevation="4" outlined shaped max-height="250" class="bg-blue accent-3 pa-3">
             <h4 class="text-uppercase text-subtitle-2 mt-2">{{ video.snippet.title }}</h4>
             <p class="text-truncate">{{ video.snippet.description }}</p>
-            <v-btn class="bg-light-blue darken-4 ml-2 mt-3 " fab icon height="40px" right width="40px">
+            <v-btn class="bg-light-blue darken-4 ml-2 mt-3 " fab icon height="40px" right width="40px" :to="{name: 'playlist', params:{id: video.id, title: video.snippet.title}}">
                 <v-icon>mdi-play</v-icon>
             </v-btn>
         </v-card>

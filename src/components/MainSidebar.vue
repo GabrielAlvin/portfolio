@@ -29,10 +29,9 @@ export default {
             drawer: null,
             menuItems: [
                 { title: "Inicio", path: "/", icon: "mdi-view-dashboard"},
-                // { title: "Sobre", path: "/sobre", icon: "mdi-newspaper-variant"},
                 { title: "GitHub", path: "/github", icon: "mdi-github"},
                 { title: "Cursos", path: "/youtube", icon: "mdi-youtube-tv"},
-                { title: "Curriculo", path: "", icon: "mdi-book-account-outline"},
+                { title: "Curriculo", path: "/curriculo", icon: "mdi-book-account-outline"},
                 { title: "Blog", path: "", icon: "mdi-image-text"},
                 { title: "Contato", path: "", icon: "mdi-forum"},
             ],

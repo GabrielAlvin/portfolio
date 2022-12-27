@@ -21,7 +21,18 @@ const routes = [
     path: '/youtube',
     name: 'youtube',
     component: () => import('../views/YoutubeView.vue')
-  }
+  },
+  {
+    path: '/curriculo',
+    name: 'curriculo',
+    component: () => import('../views/CurriculoView.vue')
+  },
+  {
+    path: '/playlist/:id/:title',
+    name: 'playlist',
+    component: () => import('../views/PlaylistView.vue')
+  },
+
 ]
 
 const router = createRouter({
