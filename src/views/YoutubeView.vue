@@ -1,10 +1,8 @@
 <template>
-    <v-container>
-        <h2 class="text-sm-h3 mb-4">Playlists</h2>
-        <v-row no-gutters>
-            <VideoCard :videos="videos"/>
-        </v-row>
-    </v-container>
+    <h2 class="text-sm-h3 mb-4">Playlists</h2>
+    <v-row no-gutters>
+        <VideoCard :videos="videos" />
+    </v-row>
 </template>
 
 <script>
@@ -18,7 +16,7 @@ export default {
     },
     data() {
         return {
-            youtube:{
+            youtube: {
                 url: 'https://www.googleapis.com/youtube/v3/',
                 key: 'AIzaSyDG8FPVTRRWtKKbRQxJvW_ieTW7lum5g-s',
                 channelId: 'UCmkP_w1m2DvgYW3mqsI3dhw',
@@ -30,11 +28,11 @@ export default {
         }
     },
 
-    created(){
-        try{
-            const { url, key, part, font, channelId} = this.youtube;
-            Axios.get(`${url}${font}?part=${part}&channelId=${channelId}&key=${key}`).then(({data}) => this.videos = data);
-        }catch(e) {
+    created() {
+        try {
+            const { url, key, part, font, channelId } = this.youtube;
+            Axios.get(`${url}${font}?part=${part}&channelId=${channelId}&key=${key}`).then(({ data }) => this.videos = data);
+        } catch (e) {
             console.error(e);
         }
     }
